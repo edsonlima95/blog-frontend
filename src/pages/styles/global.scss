@@ -1,0 +1,171 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--bg-primary) !important;
+}
+
+// ESTILOS GLOBAIS
+:root {
+    --bg-primary: #101010;
+    --bg-secondary: #191919;
+    --green: #16db65;
+    --red: #cf0022;
+    --blue: #61dafb;
+    --white: #fff;
+
+    --gray-primary: #c6c6c6;
+    --gray-second: #919191;
+    --gray-third: #707070;
+}
+
+.btnAdd {
+    padding: 5px 20px !important;
+    background-color: #16db65 !important;
+    margin-bottom: 10px;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
+.btnEdit {
+    padding: 8px 20px !important;
+    background-color: #640dfd !important;
+    margin-bottom: 10px;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
+.btnDelete {
+    padding: 8px 20px !important;
+    background-color: var(--red) !important;
+    margin-bottom: 10px;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
+}
+
+.box {
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+//Customização do componente do react-select
+.css-1s2u09g-control {
+    width: 100%;
+    background-color: var(--bg-primary) !important;
+    color: var(--gray-primary);
+    border: 1px solid #404040 !important;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.table {
+    width: 100%;
+    text-align: center;
+
+    thead {
+        color: var(--gray-primary);
+        text-transform: uppercase;
+    }
+
+    tbody {
+        padding: 20px;
+        color: var(--gray-third);
+        border-top: none !important;
+        margin-top: 1rem;
+
+        td {
+            padding: 15px;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid #404040;
+        // border-color:  !important;
+    }
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    button {
+        background-color: var(--bg-primary);
+        margin: 0 5px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        color: var(--gray-primary);
+
+        &:disabled {
+            background-color: var(--red);
+            filter: brightness(0.9);
+        }
+    }
+}
+
+.paginationWeb {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+    button {
+        font-size: 2rem;
+        background-color: var(--bg-secondary);
+        margin: 0 5px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 4px;
+        color: var(--gray-primary);
+
+        &:disabled {
+            background-color: var(--red);
+            filter: brightness(0.9);
+        }
+    }
+}
+
+//TinyMCE
+.css-b62m3t-container {
+    z-index: 2;
+}
+
+.tox-tinymce {
+    border: none !important;
+}
+
+.tox-editor-header {
+    background-color: var(--bg-primary) !important;
+}
+
+.tox-toolbar-overlord {
+    background-color: transparent !important;
+
+    .tox-toolbar__primary {
+        background-color: var(--bg-primary) !important;
+        background-size: none !important;
+        background-image: none !important;
+
+        
+    }
+}
+
+.tox {
+
+    .tox-tbtn {
+
+        svg {
+            fill: var(--gray-primary) !important;
+
+            &:hover {
+                fill: #000 !important;
+            }
+        }
+        
+    }  
+}
