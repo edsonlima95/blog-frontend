@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { truncate } from '../../../helpers'
+import { truncate } from '../../helpers'
 import styles from './styles.module.scss';
 
 type Category = {
@@ -29,13 +29,12 @@ type PostProps = {
     post: Post,
 }
 
-export function PostCard({ post }: PostProps) {
-
+export default function PostCard({ post }: PostProps) {
     return (
         <div data-aos="fade-up" data-aos-duration="2000" className={styles.postContainer}>
             <div className={`${styles.imgContainer}`}>
                 <Link href={`/post/${post.slug}`} passHref>
-                    {post.cover ? (<img alt="" srcSet={`http://localhost:3333/post-image/${post.cover}`} />) : (<img alt="" srcSet="/images/default01.png" />)}
+                    <img src={`${process.env.NEXT_PUBLIC_APP_WEB_URL}/post-image/${post.cover}`} alt={post.title}/>
                 </Link>
             </div>
 

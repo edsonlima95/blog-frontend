@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
-import { PostCard } from '../components/PostCard'
-import { Layout } from '../layout'
+import  PostCard  from '../../components/PostCard'
+import  Layout  from '../layout'
 
 type Category = {
     title: string,

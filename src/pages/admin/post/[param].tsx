@@ -275,7 +275,7 @@ function Post({ post }: PostProps) {
                         return (
                             <div className={styles.imgContainer} key={image.id} >
                                 <button style={{ paddingRight: '15px', paddingLeft: '15px' }} onClick={() => removeImage(image, post.id as number)} className='btn btn-danger'><FaTrash /></button>
-                                <img alt="" key={image.id} className="rounded" srcSet={`http://localhost:3333/api/post-image/${image.name}`} />
+                                <img alt="" key={image.id} className="rounded" srcSet={`${process.env.APP_URL_API}/post-image/${image.name}`} />
                             </div>
                         )
                     })}

@@ -8,7 +8,7 @@ export function apiCtx(ctx: GetServerSidePropsContext | undefined = undefined) {
     const cookie = getCookie('blog.token', ctx)
 
     const api = axios.create({
-        baseURL: 'http://localhost:3333/api',
+        baseURL: process.env.NEXT_PUBLIC_APP_URL_API,
         headers: {
             Authorization: `Bearer ${cookie}`
         }
@@ -36,6 +36,6 @@ export function apiCtx(ctx: GetServerSidePropsContext | undefined = undefined) {
 
 
 export const apiWeb = axios.create({
-    baseURL: 'http://localhost:3333',
+    baseURL: process.env.NEXT_PUBLIC_APP_WEB_URL,
 })
 

@@ -1,6 +1,6 @@
 import styles from './home.module.scss';
-import Menu from './components/Menu';
-import Footer from './components/Footer';
+import Menu from '../components/Menu';
+import Footer from '../components/Footer';
 
 type Layout = {
 
@@ -8,7 +8,7 @@ type Layout = {
 
 }
 
-export function Layout({ children }: Layout) {
+export default function Layout({ children }: Layout) {
   return (
     <>
       

@@ -1,9 +1,9 @@
 import styles from './styles.module.scss'
 import { GetServerSideProps } from "next"
-import { Layout } from "../layout"
+import  Layout  from "../layout"
 import { apiWeb } from '../../services/axios'
 import { truncate } from '../../helpers'
-import { PostCard } from '../components/PostCard'
+import  PostCard  from '../../components/PostCard'
 
 type Category = {
     id: number,
@@ -49,7 +49,7 @@ function Post({ post, category }: PostProps) {
             </header>
             <div className={`${styles.content} col-lg-12`}>
                 <div className="container d-flex align-items-center flex-column pt-5 col-lg-8">
-                    {post.cover ? (<img alt="" srcSet={`http://localhost:3333/post-image/${post.cover}`} />) : (<img alt="" srcSet="/images/default01.png" />)}
+                    {post.cover ? (<img alt="" src={`${process.env.NEXT_PUBLIC_APP_WEB_URL}/post-image/${post.cover}`} />) : (<img alt="" srcSet="/images/default01.png" />)}
 
                     <h1>{post.title}</h1>
 

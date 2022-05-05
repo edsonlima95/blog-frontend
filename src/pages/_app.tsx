@@ -8,7 +8,6 @@ import type { AppProps } from 'next/app'
 import { ToastContainer } from 'react-toastify';
 import { AuthProvider } from '../contexts/AuthContext';
 import { MenuProvider } from '../contexts/MenuContext';
-import { CounterProvider } from '../contexts/Counter';
 import { useEffect } from 'react';
 
 
@@ -25,7 +24,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
       <MenuProvider>
-        <CounterProvider>
           <Component {...pageProps} />
           <ToastContainer
             position="top-right"
@@ -38,7 +36,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             draggable
             pauseOnHover
           />
-        </CounterProvider>
       </MenuProvider>
     </AuthProvider>
 

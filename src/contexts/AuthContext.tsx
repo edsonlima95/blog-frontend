@@ -19,6 +19,7 @@ type ContextProvider = {
     children: ReactNode
 }
 
+
 //Cria um context
 const AuthContext = createContext({} as AuthContext)
 
