@@ -9,4 +9,4 @@ React Js, Next Js, Bootstrap.
 
 ## Acesse o projeto no link
 
-https://www.edsonlimaweb.com.br/
+https://blogtech.edsonlimaweb.com.br/
