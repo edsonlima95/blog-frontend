@@ -1,9 +1,9 @@
 import styles from './styles.module.scss'
 import { GetServerSideProps } from "next"
-import  Layout  from "../layout"
+import Layout from "../layout"
 import { apiWeb } from '../../services/axios'
 import { truncate } from '../../helpers'
-import  PostCard  from '../../components/PostCard'
+import PostCard from '../../components/PostCard'
 
 type Category = {
     id: number,
@@ -43,7 +43,7 @@ function Post({ post, category }: PostProps) {
                 <div className="col-lg-8">
                     <div>
                         <h1 title={post.title}>{truncate(post.title, 0, 30)}</h1>
-                        <h3>{ truncate(post?.sub_title, 0, 100)}</h3>
+                        <h3>{truncate(post?.sub_title, 0, 100)}</h3>
                     </div>
                 </div>
             </header>
@@ -53,15 +53,18 @@ function Post({ post, category }: PostProps) {
 
                     <h1>{post.title}</h1>
 
-                    <div dangerouslySetInnerHTML={{__html: post.description}} className={`${styles.postContent}`}></div>
+                    <div dangerouslySetInnerHTML={{ __html: post.description }} className={`${styles.postContent}`}></div>
                 </div>
             </div>
-            <div className={`${styles.related} container`}>
-                <span>Posts relacionados</span>
+            {category[0].posts?.length > 0 && (
+                <div className={`${styles.related} container`}>
+                    <span>Posts relacionados</span>
 
-                {category[0]?.posts?.map(post => (<div key={post.id}><PostCard post={post} /></div>))}
+                    {category[0]?.posts?.map(post => (<div key={post.id}><PostCard post={post} /></div>))}
 
-            </div>
+                </div>
+            )}
+
         </Layout>
     )
 

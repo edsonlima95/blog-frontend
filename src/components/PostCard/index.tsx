@@ -34,7 +34,10 @@ export default function PostCard({ post }: PostProps) {
         <div data-aos="fade-up" data-aos-duration="2000" className={styles.postContainer}>
             <div className={`${styles.imgContainer}`}>
                 <Link href={`/post/${post.slug}`} passHref>
+                    <a>
+
                     <img src={`${process.env.NEXT_PUBLIC_APP_WEB_URL}/post-image/${post.cover}`} alt={post.title}/>
+                    </a>
                 </Link>
             </div>
 

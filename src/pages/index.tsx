@@ -107,9 +107,9 @@ export default function Home({ posts, meta, postsRecents }: HomeProps) {
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                        <div className="carousel-inner">
-                            {postsRecents.map((post, index) => (<div key={post.id} className={`${index == 0 ? 'active' : ''} carousel-item position-relative`} style={{ height: '650px', minHeight: '650px' }}>
-                                <Link href={`post/${post.slug}`} >
+                        <div className="carousel-inner" style={{height: "600px"}}>
+                            {postsRecents.map((post, index) => (<div key={post.id} className={`${index == 0 ? 'active' : ''} carousel-item position-relative`} style={{height: '100%'}}>
+                                <Link href={`post/${post.slug}`}>
                                     <div className={`${styles.bgBlur}`}></div>
                                 </Link>
                                 <img src={`${process.env.NEXT_PUBLIC_APP_WEB_URL}/post-image/${post.cover}`} className="d-block" alt="..." />

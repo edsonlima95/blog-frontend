@@ -42,7 +42,7 @@
         color: var(--gray-primary);
         margin-top: 3rem;
         line-height: 2.3rem;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         padding-bottom: 2rem;
     }
 }
@@ -77,6 +77,10 @@
         span {
             grid-column: span 1;
         }
+    }
+
+    .postContent {
+        font-size: 1rem !important;
     }
 
     .headerPost {
