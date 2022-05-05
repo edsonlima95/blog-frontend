@@ -112,7 +112,7 @@ export default function Home({ posts, meta, postsRecents }: HomeProps) {
                                 <Link href={`post/${post.slug}`} >
                                     <div className={`${styles.bgBlur}`}></div>
                                 </Link>
-                                <img src={`${process.env.NEXT_PUBLIC_APP_WEB_URL}/post-image/${post.cover}`} className="d-block" width="100%" alt="..." />
+                                <img src={`${process.env.NEXT_PUBLIC_APP_WEB_URL}/post-image/${post.cover}`} className="d-block" alt="..." />
                                 <div className={`carousel-caption d-none text-center d-md-block ${styles.captionTitle}`}>
                                     <h4 style={{ fontSize: '40px' }}>{post.title}</h4>
                                     <h6 style={{ fontSize: '20px' }}>{post?.sub_title}</h6>
@@ -137,9 +137,10 @@ export default function Home({ posts, meta, postsRecents }: HomeProps) {
                     <h2>Confira abaixo conteúdos<br /> completos <span>sobre programação</span></h2>
                     <form className='d-flex justify-content-center'>
                         <div className="form-group col-sm-8 col-md-8 col-lg-8">
-                            <label htmlFor="search" className='col-sm-12 col-md-12 col-lg-12'>
-                                <input type="text" name="search" className="col-sm-10 col-md-8 col-lg-9" placeholder="Buscar" onChange={(e) => searchItems(e)} />
-                                <FaSearch size="40" style={{ position: 'relative', right: '50', marginBottom: "10" }} />
+                            <label htmlFor="search" className='col-sm-12 col-md-12 col-lg-12 d-flex align-items-center justify-content-center mt-5'>
+                                <input type="text" name="search" className="col-sm-10 col-md-8 col-lg-7" placeholder="Buscar" onChange={(e) => searchItems(e)} />
+                                
+                                <FaSearch size="50"/>
                             </label>
                         </div>
                     </form>
