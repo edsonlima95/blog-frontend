@@ -5,8 +5,3 @@ Este projeto foi feito para colocar em prática meus conhecimentos e ao mesmo te
 ## Stack utilizada
 
 React Js, Next Js, Bootstrap.
-
-
-## Acesse o projeto no link
-
-https://blogdev.edsonlimaweb.com.br/
